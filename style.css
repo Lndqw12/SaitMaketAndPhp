@@ -1,36 +1,59 @@
 .q1{
 	position:absolute;
-	background-color:blue;
+	background-color:blue-space;
 	width:250px;
 	height:100px;
-	opacity:0.1;
+	opacity:0.7;
 	border-style:solid;
 	border-radius:14px;
 	box-shadow:2px 4px 9px 2px #a0facd;
 	border:none;
 	word-break:break-all;
+	text-align:center;
+	font-family:impact;
+	line-height:46px;
+	font-size:30px;
+	background-image:url(1.jpg);
+}
+.q1:active{
+	position:absolute;
+	background-color:blue-space;
+	width:250px;
+	height:100px;
+	opacity:0.9;
+	border-style:solid;
+	border-radius:14px;
+	box-shadow:2px 4px 9px 2px #aaaacd;
+	border:none;
+	word-break:break-all;
+	text-align:center;
+	font-family:impact;
+	background-image:url(1.jpg);
 }
 .q2{
+	font-family:impact;
 	position:absolute;
-	background-color:blue;
+	background-color:blue-space;
+	background-image:url(3.jpg);
 	width:250px;
 	height:200px;
 	left:1340px;
-	opacity:0.1;
+	opacity:0.9;
 	border-style:solid;
 	border-radius:14px;
 	box-shadow:2px 4px 9px 2px #a0facd;
 	border:none;
 	word-break:break-all;
+	text-align:right;
 }
 .q3{
 	position:absolute;
-	background-color:blue;
+	background-color:blue-space;
 	width:1040px;
 	height:100px;
 	left:280px;
 	top:8px;
-	opacity:0.1;
+	opacity:0.9;
 	border-style:solid;
 	border-radius:14px;
 	box-shadow:2px 4px 9px 2px #a0facd;
@@ -39,11 +62,11 @@
 }
 .q4{
 	position:absolute;
-	background-color:blue;
+	background-color:blue-space;
 	width:250px;
 	height:340px;
 	top:130px;
-	opacity:0.1;
+	opacity:0.9;
 	border-style:solid;
 	border-radius:14px;
 	box-shadow:2px 4px 9px 2px #a0facd;
@@ -52,11 +75,11 @@
 }
 .q5{
 	position:absolute;
-	background-color:blue;
+	background-color:blue-space;
 	width:1040px;
 	height:500px;
 	top:130px;
-	opacity:0.1;
+	opacity:0.9;
 	left:280px;
 	border-style:solid;
 	border-radius:14px;
@@ -66,11 +89,11 @@
 }
 .q6{
 	position:absolute;
-	background-color:blue;
+	background-color:blue-space;
 	width:250px;
 	height:400px;
 	left:1340px;
-	opacity:0.1;
+	opacity:0.9;
 	top:230px;
 	border-style:solid;
 	border-radius:14px;
@@ -80,10 +103,10 @@
 }
 .q7{
 	position:absolute;
-	background-color:blue;
+	background-color:blue-space;
 	width:250px;
 	height:135px;
-	opacity:0.1;
+	opacity:0.9;
 	top:495px;
 	border-style:solid;
 	border-radius:14px;
@@ -93,11 +116,11 @@
 }
 .q8{
 	position:absolute;
-	background-color:purple;
+	background-color:purple-space;
 	width:1000px;
 	height:350px;
 	top:260px;
-	opacity:0.2;
+	opacity:0.9;
 	left:300px;
 	border-style:solid;
 	border-radius:14px;

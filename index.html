@@ -7,8 +7,22 @@
   </head>
  <body background="2.jpg">
 	<div class ="q1">
+	<a href ="index.html">SaitMaket</a>
 	</div>
 	<div class ="q2">
+	<?if(!isset($_Request['weapon')){?>
+	 <form action ="<=$_server['script_name']?>">
+		Имя:=   <input $type=text name="login"value=""><br>
+		Пароль:=<input $type=password name="pass"value=""><br>
+	 <input type=submit name='weapon'value='Отправить'><br>
+	</form>
+	<?} else {
+		if($_request ['login']=="root"&& $_request['pause']=="111"){
+		 echo "открыто";
+		else
+		 echo "закрыто";
+   }
+	?>
 	</div>
 	<div class ="q3">
 	</div>
