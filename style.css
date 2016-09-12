@@ -38,7 +38,23 @@
 	width:250px;
 	height:200px;
 	left:1340px;
-	opacity:0.9;
+	opacity:0.8;
+	border-style:solid;
+	border-radius:14px;
+	box-shadow:2px 4px 9px 2px #a0facd;
+	border:none;
+	word-break:break-all;
+	text-align:right;
+}
+.q2:hover{
+	font-family:impact;
+	position:absolute;
+	background-color:blue-space;
+	background-image:url(3.jpg);
+	width:250px;
+	height:200px;
+	left:1340px;
+	opacity:0.85;
 	border-style:solid;
 	border-radius:14px;
 	box-shadow:2px 4px 9px 2px #a0facd;

@@ -40,8 +40,8 @@ echo "</br>";
  echo $result
 //is_numeric ($whatis,$random);
 
-$varone = "73";
-$vartwo = "27";
-$result = $varone+$vartwo;
-echo $result;
+//$varone = "73";
+//$vartwo = "27";
+//$result = $varone+$vartwo;
+//echo $result;
  ?>
