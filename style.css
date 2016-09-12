@@ -1,39 +1,39 @@
 .q1{
 	position:absolute;
-	background-color:blue-space;
+	background-color:91847e;
 	width:250px;
 	height:100px;
-	opacity:0.7;
+	opacity:0.73;
 	border-style:solid;
 	border-radius:14px;
-	box-shadow:2px 4px 9px 2px #a0facd;
-	border:none;
+	box-shadow:2px 4px 9px 2px #1737d4;
+	border-color:blue;
 	word-break:break-all;
 	text-align:center;
 	font-family:impact;
 	line-height:46px;
 	font-size:30px;
-	background-image:url(1.jpg);
+	background-image:url(1.gif);
 }
 .q1:active{
 	position:absolute;
-	background-color:blue-space;
+	background-color:91847e;
 	width:250px;
 	height:100px;
-	opacity:0.9;
+	opacity:0.73;
 	border-style:solid;
 	border-radius:14px;
-	box-shadow:2px 4px 9px 2px #aaaacd;
-	border:none;
+	box-shadow:2px 4px 9px 2px #1737d4;
+	border-color:blue;
 	word-break:break-all;
 	text-align:center;
 	font-family:impact;
-	background-image:url(1.jpg);
+	background-image:url(1.gif);
 }
 .q2{
 	font-family:impact;
 	position:absolute;
-	background-color:blue-space;
+	background-color:91847e;
 	background-image:url(3.jpg);
 	width:250px;
 	height:200px;
@@ -41,15 +41,15 @@
 	opacity:0.8;
 	border-style:solid;
 	border-radius:14px;
-	box-shadow:2px 4px 9px 2px #a0facd;
-	border:none;
+	box-shadow:2px 4px 9px 2px #ffffff;
+	border-color:#ababab;
 	word-break:break-all;
 	text-align:right;
 }
 .q2:hover{
 	font-family:impact;
 	position:absolute;
-	background-color:blue-space;
+	background-color:91847e;
 	background-image:url(3.jpg);
 	width:250px;
 	height:200px;
@@ -57,55 +57,59 @@
 	opacity:0.85;
 	border-style:solid;
 	border-radius:14px;
-	box-shadow:2px 4px 9px 2px #a0facd;
-	border:none;
+	box-shadow:2px 4px 9px 2px #ffffff;
+	border-color:#ababab;
 	word-break:break-all;
 	text-align:right;
 }
 .q3{
 	position:absolute;
-	background-color:blue-space;
+	background-color:91847e;
 	width:1040px;
 	height:100px;
 	left:280px;
 	top:8px;
-	opacity:0.9;
+	opacity:0.73;
 	border-style:solid;
 	border-radius:14px;
-	box-shadow:2px 4px 9px 2px #a0facd;
-	border:none;
+	box-shadow:2px 4px 9px 2px #ffffff;
+	border-color:#ababab;
 	word-break:break-all;
 }
 .q4{
 	position:absolute;
-	background-color:blue-space;
+	background-color:91847e;
 	width:250px;
 	height:340px;
 	top:130px;
-	opacity:0.9;
+	opacity:0.73;
 	border-style:solid;
-	border-radius:14px;
-	box-shadow:2px 4px 9px 2px #a0facd;
-	border:none;
+	border-radius:5px;
+	box-shadow:2px 4px 9px 2px #ffffff;
+	border-color:#ababab;
 	word-break:break-all;
+	text-align:center;
+	border-width:1px;
+	font-size:15px;
+	font-family:;
 }
 .q5{
 	position:absolute;
-	background-color:blue-space;
+	background-color:91847e;
 	width:1040px;
 	height:500px;
 	top:130px;
-	opacity:0.9;
+	opacity:0.73;
 	left:280px;
 	border-style:solid;
 	border-radius:14px;
-	box-shadow:2px 4px 9px 2px #a0facd;
-	border:none;
+	box-shadow:2px 4px 9px 2px #ffffff;
+	border-color:#ababab;
 	word-break:break-all;
 }
 .q6{
 	position:absolute;
-	background-color:blue-space;
+	background-color:91847e;
 	width:250px;
 	height:400px;
 	left:1340px;
@@ -113,20 +117,20 @@
 	top:230px;
 	border-style:solid;
 	border-radius:14px;
-	box-shadow:2px 4px 9px 2px #a0facd;
 	border:none;
 	word-break:break-all;
+	font-family:;
+	font-size:12px;
 }
 .q7{
 	position:absolute;
-	background-color:blue-space;
+	background-color:91847e-space;
 	width:250px;
 	height:135px;
-	opacity:0.9;
+	opacity:0.73;
 	top:495px;
 	border-style:solid;
 	border-radius:14px;
-	box-shadow:2px 4px 9px 2px #a0facd;
 	border:none;
 	word-break:break-all;
 }
@@ -136,13 +140,14 @@
 	width:1000px;
 	height:350px;
 	top:260px;
-	opacity:0.9;
+	opacity:0.73;
 	left:300px;
 	border-style:solid;
 	border-radius:14px;
-	box-shadow:2px 4px 9px 2px #a0facd;
-	border:none;
+	box-shadow:2px 4px 9px 2px #ffffff;
+	border-color:#ababab;
 	word-break:break-all;
+	border:none;
 }
 @font-face {
 font-family:glyphicons-halflings-regular; /* имя шрифта для CSS правил */

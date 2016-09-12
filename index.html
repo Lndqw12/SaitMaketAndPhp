@@ -5,11 +5,12 @@
     <title>Сайт</title>
 	<link href="style.css" rel="stylesheet">
   </head>
- <body background="2.jpg">
+ <body background = "2.jpg">
 	<div class ="q1">
 	<a href ="index.html">SaitMaket</a>
 	</div>
 	<div class ="q2">
+	<font color ="white">
 	<?if(!isset($_Request['weapon')){?>
 	 <form action ="<=$_server['script_name']?>">
 		Имя:=   <input $type=text name="login"value=""><br>
@@ -22,17 +23,201 @@
 		else
 		 echo "закрыто";
    }
-	?>
+	?></font>
 	</div>
 	<div class ="q3">
 	</div>
 	<div class ="q4">
+	
+	
+	<script type="text/javascript">
+var dDate=new Date();
+var cur_month=dDate.getMonth();
+var day_of_month=dDate.getDate();
+var cur_year=dDate.getFullYear();
+var Prev_Element=new Object();
+var bgcolor, webgcolor, wecolor, nwecolor, tbgcolor, ntbgcolor, sbgcolor;
+
+function fToggle_color(el) {
+var toggle_col="blue";
+if (el.id=="cal_text") {
+  if (el.color==toggle_col) el.color="";
+  else el.color=toggle_col;
+}
+else if ((el.id=="cal_cell") || (el.id=="today_cell")) {
+ for (var i in el.children) {
+  if (el.children[i].id=="cal_text") {
+   if (el.children[i].color==toggle_col) el.children[i].color="";
+   else el.children[i].color=toggle_col;
+  }
+ }
+}
+}
+function opted_day(el) {
+if (el.id=="cal_cell") {
+ if (!isNaN(parseInt(el.children["cal_text"].innerText))) {
+  el.bgColor=sbgcolor;
+  Prev_Element.bgColor=ntbgcolor;
+  document.all.selected_date.value=parseInt(el.children["cal_text"].innerText);
+  Prev_Element=el;
+ }
+}
+}
+function DaysInMonth(iMonth, iYear) {
+var prev_date=new Date(iYear, iMonth, 0);
+return prev_date.getDate();
+}
+function build_cal(iYear, iMonth) {
+var the_month=new Array();
+    the_month[0]=new Array("Пн","Вт","Ср","Чт","Пт","Сб","Вс");
+    the_month[1]=new Array(7);
+    the_month[2]=new Array(7);
+    the_month[3]=new Array(7);
+    the_month[4]=new Array(7);
+    the_month[5]=new Array(7);
+    the_month[6]=new Array(7);
+var dCalDate=new Date(iYear, iMonth-1, 1);
+var day_first=dCalDate.getDay();
+var iDaysInMonth=DaysInMonth(iMonth, iYear);
+var iVarDate=1;
+var i, d, w;
+if (day_first==0) day_first=6;
+else day_first=day_first-1;
+
+for (d=day_first; d < 7; d++) {
+ the_month[1][d]=iVarDate;
+ iVarDate++;
+}
+for (w=2; w < 7; w++) {
+ for (d=0; d < 7; d++) {
+  if (iVarDate <= iDaysInMonth) {
+   the_month[w][d]=iVarDate;
+   iVarDate++;
+  }
+ }
+}
+return the_month;
+}
+function draw_cal(iYear, iMonth, cell_width, cell_height, text_weight, ibg_col,
+                  iwebg_col, inwe_col, iwe_col, itbg_col, intbg_col, isbg_col) {
+bgcolor=ibg_col;
+webgcolor=iwebg_col;
+nwecolor=inwe_col;
+wecolor=iwe_col;
+tbgcolor=itbg_col;
+ntbgcolor=intbg_col;
+sbgcolor=isbg_col;
+var my_month;
+my_month=build_cal(iYear, iMonth);
+document.write("<table border='0'>")
+document.write("<tr align='center' style='background-color:" + bgcolor + ";color:" + nwecolor +"'>");
+document.write("<td><b>" + my_month[0][0] + "</b></td>");
+document.write("<td><b>" + my_month[0][1] + "</b></td>");
+document.write("<td><b>" + my_month[0][2] + "</b></td>");
+document.write("<td><b>" + my_month[0][3] + "</b></td>");
+document.write("<td><b>" + my_month[0][4] + "</b></td>");
+document.write("<td style='background-color:" + webgcolor + ";color:" +  wecolor + "'><b>" + my_month[0][5] + "</b></td>");
+document.write("<td style='background-color:" + webgcolor + ";color:" +  wecolor + "'><b>" + my_month[0][6] + "</b></td>");
+document.write("</tr>");
+for (w=1; w < 7; w++) {
+ document.write("<tr align='center' valign='center'>")
+ for (d=0; d < 7; d++) {
+  if (my_month[w][d]==day_of_month) document.write("<td id=today_cell bgcolor='" + tbgcolor + "'width='" + cell_width + "' height='" + cell_height +      "'style='cursor:Hand;font-weight:" + text_weight + "' onMouseOver='fToggle_color(this)' + onMouseOut='fToggle_color(this)' onclick='opted_day(this)'>");
+  else document.write("<td id=cal_cell bgcolor='" + ntbgcolor + "'width='" + cell_width + "' height='" + cell_height + "'style='cursor:Hand;font-weight:" +      text_weight + "' onMouseOver='fToggle_color(this)' + onMouseOut='fToggle_color(this)' onclick='opted_day(this)'>");
+  if (!isNaN(my_month[w][d]))
+          document.write("<font id=cal_text onclick=opted_day(this)>" +  my_month[w][d]);
+  else document.write("<font id=cal_text onclick=opted_day(this)>&nbsp;");
+ document.write("</td>")
+ }
+document.write("</tr>");
+}
+document.write("</table>")
+}
+function update(iYear, iMonth) {
+my_month=build_cal(iYear, iMonth);
+Prev_Element.bgColor=ntbgcolor;
+if (((iMonth-1)==cur_month) && (iYear==cur_year)) today_cell.bgColor=tbgcolor;
+else today_cell.bgColor=ntbgcolor;
+document.all.selected_date.value="";
+for (w=1; w < 7; w++) {
+ for (d=0; d < 7; d++) {
+  if (!isNaN(my_month[w][d])) cal_text[((7*w)+d)-7].innerText=my_month[w][d];
+  else cal_text[((7*w)+d)-7].innerText=" ";
+ }
+}
+}
+</script>
+<form name="c_fоrm" action="">
+<input type="hidden" name="selected_date" value="input">
+<select name="sel_month"
+    onchange='update(c_fоrm.sel_year.value, c_fоrm.sel_month.value)'>
+ <option value="1">Январь</option>
+ <option value="2">Февраль</option>
+ <option value="3">Март</option>
+ <option value="4">Апрель</option>
+ <option value="5">Май</option>
+ <option value="6">Июнь</option>
+ <option value="7">Июль</option>
+ <option value="8">Август</option>
+ <option value="9">Сентябрь</option>
+ <option value="10">Октябрь</option>
+ <option value="11">Ноябрь</option>
+ <option value="12">Декабрь</option>
+</select>
+<select name="sel_year"
+    onchange='update(c_fоrm.sel_year.value, c_fоrm.sel_month.value)'>
+ <option value="2013">2013</option>
+ <option value="2014">2014</option>
+ <option value="2015">2015</option>
+ <option value="2016">2016</option>
+ <option value="2017">2017</option>
+ </select>
+</form>
+<script type="text/javascript">
+var cur_date=new Date();
+draw_cal(cur_date.getFullYear(), cur_date.getMonth()+1, 30, 16, "bold", "blue", "black", "white", "white", "white", "gray", "#aaa");
+c_fоrm.sel_month.options[cur_date.getMonth()].selected=true;
+for (i=0; i < c_fоrm.sel_year.length; i++)
+ if (c_fоrm.sel_year.options[i].value==cur_date.getFullYear())
+    c_fоrm.sel_year.options[i].selected=true;
+</script>
+	<font color ="#c0ffb0">
+	<p>А вот и Шутеечка подъехала:
+	Наш штатный 1С-программист, отработавший в компании уже три года, собирается в понедельник на собеседование в другую компанию и выдаёт:
+- Итак! У меня есть три дня, чтобы подучить 1С.
+	</p>
+	</font>
+	
 	</div>
 	<div class ="q5">
 	</div>
 	<div class ="q6">
+	<p><font color ="#d7ff47">
+	<li>Минимальные системные требования Crysis 3</li>
+Операционная система: Windows Vista/7/8
+Видеокарта: поддерживающая DirectX 11 с 1 ГБ видеопамяти
+Процессор: Двух ядерный
+Оперативная память: 2 ГБ (3 ГБ для Windows Vista)
+Примерная комплектация для Nvidia/Intel: Nvidia GTS 450, Intel Core2 Duo 2.4 Ghz (E6600)
+Примерная комплектация для AMD: AMD Radeon HD5770, AMD Athlon64 X2 2.7 Ghz (5200+)
+<li>Рекомендуемые системные требования Crysis 3</li>
+Операционная система: Windows Vista/7/8
+Видеокарта: поддерживающая DirectX 11 с 1 ГБ видеопамяти
+Процессор: Четырёх ядерный
+Оперативная память: 4 ГБ
+Примерная комплектация для Nvidia/Intel: Nvidia GTX 560, Intel Core i3-530
+Примерная комплектация для AMD: AMD Radeon HD5870, AMD Phenom II X2 565
+<li>Системные требования Crysis 3 для высоких настроек графики</li>
+Операционная система: Windows Vista/7/8
+Видеокарта: поддерживающая DirectX 11, последнего поколения
+Процессор: Четырёх ядерный, последнего поколения
+Оперативная память: 8 ГБ
+Примерная комплектация для Nvidia/Intel: NVidia GTX 680, Intel Core i7-2600k
+Примерная комплектация для AMD: AMD Radeon HD7970, AMD Bulldozer FX4150
+	</p></font>
 	</div>
 	<div class ="q7">
+	<a href="https://music.yandex.ru/feed " target=_blank><img src="http://gifr.ru/data/gifs/5/7/5/575041bfaa.gif " border="0" title="" ></a>
 	</div>
 	<div class ="q8">
 	</div>
