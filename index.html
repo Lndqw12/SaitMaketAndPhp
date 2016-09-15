@@ -3,18 +3,50 @@
   <head>
     <meta charset="utf-8">
     <title>Сайт</title>
-	<link href="style.css" rel="stylesheet">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
   </head>
- <body background = "2.jpg">
-	<div class ="q1">
-	<a href ="index.html">SaitMaket</a>
+ <body background = "fot/2.jpg">
+ <ul class="nav nav-pills">
+      <li class="active"><a href="index.html">Главная</a></li>
+      <li><a href="index.html">1</a></li>
+      <li><a href="index1.html">2</a></li>
+	  <li><a href="index2.html">3</a></li>
+	  <li><a href="index3.html">4</a></li>
+	  </ul>
+	<div class ="q1"><font color ="gray">
+	<a href ="index.html">SaitGif.org</a></br>
+	<span id="pendule"></span>
+<script language="javascript" type="text/javascript">
+<!-- Begin
+function clock() {
+var digital = new Date();
+var hours = digital.getHours();
+var minutes = digital.getMinutes();
+var seconds = digital.getSeconds();
+var amOrPm = "AM";
+if (hours > 11) amOrPm = "PM";
+if (hours > 12) hours = hours - 12;
+if (hours == 0) hours = 12;
+if (minutes <= 9) minutes = "0" + minutes;
+if (seconds <= 9) seconds = "0" + seconds;
+dispTime = '<b>'+hours + ":" + minutes + ":" + seconds + " " + amOrPm+'</b>';
+document.getElementById('pendule').innerHTML = dispTime;
+setTimeout("clock()", 1000);
+}
+window.onload=clock;
+//  End -->
+</script></font>
 	</div>
 	<div class ="q2">
 	<font color ="white">
 	<?if(!isset($_Request['weapon')){?>
 	 <form action ="<=$_server['script_name']?>">
-		Имя:=   <input $type=text name="login"value=""><br>
-		Пароль:=<input $type=password name="pass"value=""><br>
+		Имя:= <input $type=text name="login"value=""><br>
+		Пароль:= <input $type=password name="pass"value=""><br>
 	 <input type=submit name='weapon'value='Отправить'><br>
 	</form>
 	<?} else {
@@ -26,10 +58,9 @@
 	?></font>
 	</div>
 	<div class ="q3">
+	<marquee scrollamount="40" direction="right" style="color: #D9470D; font-size: 40px; font-weight: bolder; line-height: 100px; text-shadow: #000000 0px 5px 6px;">Дратути)0))</marquee>
 	</div>
 	<div class ="q4">
-	
-	
 	<script type="text/javascript">
 var dDate=new Date();
 var cur_month=dDate.getMonth();
@@ -181,15 +212,9 @@ for (i=0; i < c_fоrm.sel_year.length; i++)
  if (c_fоrm.sel_year.options[i].value==cur_date.getFullYear())
     c_fоrm.sel_year.options[i].selected=true;
 </script>
-	<font color ="#c0ffb0">
-	<p>А вот и Шутеечка подъехала:
-	Наш штатный 1С-программист, отработавший в компании уже три года, собирается в понедельник на собеседование в другую компанию и выдаёт:
-- Итак! У меня есть три дня, чтобы подучить 1С.
-	</p>
-	</font>
-	
 	</div>
 	<div class ="q5">
+	<!--<img src ="2.gif" width="190px" height="450px">-->
 	</div>
 	<div class ="q6">
 	<p><font color ="#d7ff47">
@@ -220,6 +245,9 @@ for (i=0; i < c_fоrm.sel_year.length; i++)
 	<a href="https://music.yandex.ru/feed " target=_blank><img src="http://gifr.ru/data/gifs/5/7/5/575041bfaa.gif " border="0" title="" ></a>
 	</div>
 	<div class ="q8">
+	<img src = "fot/3.gif" width="1000px" height="350px">
 	</div>
+ <script src ="js/bootstrap.js"></script>
+ <script src ="js/bootstrap.min.js"></script>
  </body>
  </html>
